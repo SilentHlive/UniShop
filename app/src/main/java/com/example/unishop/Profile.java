@@ -151,6 +151,7 @@ public class Profile extends AppCompatActivity implements LocationListener {
                     JSONArray restarray = jsonObject.getJSONArray("user");
                     JSONObject c = restarray.getJSONObject(0);
                     matricno = c.getString("matricno");
+                    phone = c.getString("phone");
                     username = c.getString("username");
                     email = c.getString("email");
                     location = c.getString("location");
