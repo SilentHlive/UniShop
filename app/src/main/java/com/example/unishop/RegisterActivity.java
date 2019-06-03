@@ -233,7 +233,7 @@ public class RegisterActivity extends AppCompatActivity implements LocationListe
                 .setPositiveButton(this.getResources().getString(R.string.yesbutton),new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog,int id) {
                         //Toast.makeText(getActivity(), "DELETE "+jobid, Toast.LENGTH_SHORT).show();
-                        new Encode_image().execute(getDir(),user.phone+".jpg");
+                        new Encode_image().execute(getDir(),user.matricno+".jpg");
                         Toast.makeText(RegisterActivity.this, getResources().getString(R.string.registrationprocess), Toast.LENGTH_SHORT).show();
 
                     }

@@ -5,9 +5,9 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.os.Build;
+//import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.annotation.RequiresApi;
+//import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -131,6 +131,7 @@ public class LoginActivity extends AppCompatActivity {
                     bundle.putString("email",email);
                     bundle.putString("username",val[0]);
                     bundle.putString("phone",val[1]);
+                    bundle.putString("matricno", val[2]);
                     intent.putExtras(bundle);
                     startActivity(intent);
                 }

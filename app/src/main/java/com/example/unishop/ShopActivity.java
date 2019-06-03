@@ -236,7 +236,7 @@ public class ShopActivity extends AppCompatActivity {
                     myDialogWindow.dismiss();
                     loadproducts(shopid);
                 }else{
-                    Toast.makeText(ShopActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                   //Toast.makeText(ShopActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 

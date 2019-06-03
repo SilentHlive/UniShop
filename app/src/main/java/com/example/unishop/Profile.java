@@ -80,10 +80,11 @@ public class Profile extends AppCompatActivity implements LocationListener {
         email = bundle.getString("email"); //email
         username = bundle.getString("username"); //name
         phone = bundle.getString("phone"); //phone
+        matricno = bundle.getString("matricno");
         txtemail.setText(email);
         txtn.setText(username);
         txtphone.setText(phone);
-        String image_url = "http://www.simplehlife.com/uniShop/profileimages/" + phone + ".jpg";
+        String image_url = "http://www.simplehlife.com/uniShop/profileimages/" + matricno + ".jpg";
         Picasso.with(this).load(image_url)
                 .fit().into(imgprofile);
         //.resize(400,400).into(imgprofile);

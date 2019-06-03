@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<HashMap<String, String>> cartlist;
     double total;
     Spinner spcat;
-    String email,username, phone;
+    String email,username, matricno, phone;
     Dialog myDialogCart;
 
     @Override
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
         email = bundle.getString("email");
         username = bundle.getString("username");
         phone = bundle.getString("phone");
+        matricno = bundle.getString("matricno");
         loadShop(spcat.getSelectedItem().toString());
         lvshop.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -157,6 +158,7 @@ public class MainActivity extends AppCompatActivity {
                 bundle.putString("email",email);
                 bundle.putString("username",username);
                 bundle.putString("phone",phone);
+                bundle.putString("matricno",matricno);
                 intent.putExtras(bundle);
                 startActivity(intent);
                 return true;
@@ -253,12 +255,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
+                Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
                 if (s.equalsIgnoreCase("success")){
                     myDialogCart.dismiss();
                     loadCartData();
                     Toast.makeText(MainActivity.this, "Success", Toast.LENGTH_SHORT).show();
                 }else{
-                    Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                   Toast.makeText(MainActivity.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
             }
         }
