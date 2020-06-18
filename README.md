@@ -1,6 +1,6 @@
 # uniShop
 
-<img src="https://github.com/SilentHlive/uniShop/blob/master/thumbnail%20project.jpg" width="500px" align="center">
+<img src="https://github.com/SilentHlive/uniShop/blob/master/thumbnail%20project.jpg" width="500px" align="centre">
 
 
 This is the link to uniShop's sql, php and images files 
